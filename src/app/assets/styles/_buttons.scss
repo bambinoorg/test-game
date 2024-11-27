@@ -1,0 +1,17 @@
+@import "vars";
+
+.mdc-button.mat-mdc-button-base {
+
+  &.mat-mdc-button-disabled {
+    background:$btn-disabled ;
+
+    & .mdc-button__label {
+      color: $text-gray !important;
+    }
+  }
+
+  & .mdc-button__label {
+    color: $text-white !important;
+  }
+}
+

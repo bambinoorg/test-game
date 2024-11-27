@@ -1,0 +1,14 @@
+<div class="result-modal" [class.lose]="isLose">
+  <div class="result-modal-header">
+    {{ title }}
+    <span class="close" (click)="close()">+</span>
+  </div>
+  <div class="result-modal-body">
+    <p class="result-modal-body__text">
+      {{text}}
+    </p>
+  </div>
+  <div class="result-modal-footer">
+    <button mat-flat-button (click)="close()">Try again!</button>
+  </div>
+</div>

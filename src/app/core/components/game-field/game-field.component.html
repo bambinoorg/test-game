@@ -1,0 +1,11 @@
+<div class="game-field">
+  @for(item of gameField;let idx = $index; track idx) {
+    <div class="game-field__item" [style.background]="item.color" (click)="handleField(idx)">
+    </div>
+  }
+
+</div>
+<div class="game-footer">
+  <button mat-flat-button [disabled]="!timeValue || gameStarted" (click)="startGame()">Start</button>
+  <button mat-stroked-button [disabled]="!gameStarted" (click)="cancelGame()">Cancel</button>
+</div>

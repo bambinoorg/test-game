@@ -1,0 +1,22 @@
+<div class="game">
+
+  <div class="game-header">
+  <mat-form-field>
+    <mat-label>Enter time</mat-label>
+    <input matInput type="text" [formControl]="timeControl">
+  </mat-form-field>
+  </div>
+
+  <div class="game-body">
+    <div class="game-body__score">
+      <p class="text">Player</p><span [class.player]="score?.player > 0">{{score?.player || 0}}</span>
+    </div>
+    <app-game-field [timeValue]="timeControl.value" (scoreChanged)="handleScore($event)"></app-game-field>
+    <div class="game-body__score">
+      <p class="text">Computer</p><span [class.comp]="score?.computer > 0">{{score?.computer || 0}}</span>
+    </div>
+  </div>
+
+
+</div>
+
